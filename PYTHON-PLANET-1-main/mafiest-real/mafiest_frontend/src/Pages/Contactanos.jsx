@@ -114,32 +114,30 @@ const Contactanos = ({ user: userProp, setUser: setUserProp }) => {
 
   // Ordenar blogs por likes
   const orderBlogs = [...blogs].sort((a, b) => b.likes - a.likes)
-
-return (
-  <div>
-    {!userProp ? (
-      <div>
-        <Menu user={userProp}/>
-        <LoginForm
-          handleLogin={handleLogin}
-          username={username}
-          setUsername={setUsername}
-          password={password}
-          setPassword={setPassword}
-          message={message}
-        />
+  return (
+    <div>
+      <Menu user={userProp}/>
+      <div style={{ marginTop: '4rem', padding: '2rem' }}>
+        {!userProp ? (
+          <LoginForm
+            handleLogin={handleLogin}
+            username={username}
+            setUsername={setUsername}
+            password={password}
+            setPassword={setPassword}
+            message={message}
+          />
+        ) : (
+          <>
+            <h2>Blogs</h2>
+            <Notification message={message} />
+            <p>
+              {userProp.name} ({userProp.Rol}) conectado{' '}
+              <button onClick={handleLogout}>Cerrar sesión</button>
+            </p>
+          </>
+        )}
       </div>
-    ) : (
-        <>
-          <Menu user={userProp}/>
-          <h2>Blogs</h2>
-          <Notification message={message} />
-          <p>
-            {userProp.name} ({userProp.Rol}) conectado{' '}
-            <button onClick={handleLogout}>Cerrar sesión</button>
-          </p>
-        </>
-      )}
     </div>
   )
 }
