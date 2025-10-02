@@ -64,7 +64,7 @@ const RegistroIndependiente = () => {
           </form>
           {mensaje && <p style={{ textAlign: 'center', marginTop: 10 }}>{mensaje}</p>}
           <div style={{ marginTop: '1rem', textAlign: 'center' }}>
-            <a href="/PYTHON-PLANET" style={{ color: '#007bff', textDecoration: 'underline' }}>
+            <a href="/login" style={{ color: '#007bff', textDecoration: 'underline' }}>
               ¿Ya tienes cuenta? Inicia sesión
             </a>
           </div>

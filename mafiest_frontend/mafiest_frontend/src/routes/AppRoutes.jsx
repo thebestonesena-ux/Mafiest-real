@@ -14,7 +14,7 @@ function AppRoutes({ user, setUser }) {
       <Routes>
         <Route path="/" element={<LibreriaRecursos user={user} />} />
         <Route path="/sobre-nosotros" element={<MafiestInfo user={user} />} />
-        <Route path="/PYTHON-PLANET" element={<Contactanos user={user} setUser={setUser} />} />
+  <Route path="/login" element={<Contactanos user={user} setUser={setUser} />} />
         <Route path="/Tareas" element={<Tareas user={user} />} />
         <Route path="/Tareas-ver" element={<VerTareas user={user} />} />
         <Route path="/Crear" element={<Crear user={user} />} />
